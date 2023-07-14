@@ -1,0 +1,18 @@
+useEffect(()=>{
+  const apiKey ='9b8db1c54ee54ba8862143211231107'
+  const apiUrl ='https://api.weatherapi.com/v1'
+  const method ='/current.json'
+  const city ='tunis'
+  const request = apiUrl+method+'?key='+apiKey+'&q='+city+'&aqi=no'
+    async function getWeather (resource){
+      const response = await fetch(resource)
+      if (response.status !==200){
+        throw new Error ('Could not fetch data ! false request !')
+      }
+      const data = await response.json()
+      return data
+    }
+    getWeather(request)
+  .then(data => console.log('resolved :',data))
+  .catch(err => console.log('rejected :',err.message))
+},[])
