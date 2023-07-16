@@ -4,6 +4,8 @@ import Search from '../components/search/Search'
 import { WEATHER_API_KEY, WEATHER_API_URL } from './API'
 import './App.css'
 import Forecast from '../components/forecast/Forecast'
+import CurrentLocation from './CurrentLocation'
+
 
 function App() {
 const [currentWeather,setCurrentWeather]=useState(null)
@@ -26,9 +28,10 @@ console.log(forecast)
 
   return (
     <div className='container'>
-      <Search onSearchChange={handleOnSearchChange} />
+     <div className="search-bar"><Search onSearchChange={handleOnSearchChange} /></div>
       {currentWeather &&<CurrentWeather data={currentWeather} />}
       {forecast &&<Forecast data={forecast}/>}
+      <CurrentLocation />
     </div>
 
   )

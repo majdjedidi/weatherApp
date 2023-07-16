@@ -1,57 +1,82 @@
-.weather{
-    width: 300px;
+/* .weather{
+    width: 50%;
     border-radius: 6px;
     box-shadow: 10px -2px 20px 2px rgb(0 0 0 /30%);
     color: #fff;
-    background-color: #333;
-    margin: 20px auto 0 auto;
+    background-color: #333B;
     padding: 0 20px 20px 20px;
+    min-height: 100%;
+    margin: auto;
+    backdrop-filter: blur(20px);
+} */
+
+.current-weather{
+    padding: 50px 10px;
 }
-.top,
-.bottom{
+.top{
+
+   margin: 20px;
+}
+.current-status{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 0;
 }
-.city{
-    font-weight: 600px;
-    font-size: 18px;
-    line-height: 1;
-    margin: 0;
-    letter-spacing: 1px;
-}
-.weather-description{
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1;
-    margin: 0;
-}
-.weather-icon{
-    width: 100px;
-}
-.temperature{
+.temp{
+    margin-left: 50px;
     font-weight: 600;
-    font-size: 70px;
-    width: auto;
-    letter-spacing: -5px;
-    margin: 10px 0;
+    font-size: 60px;
+    margin-bottom: 0;
 }
-.details{
-    width: 100%;
+.location{
+letter-spacing: 1px;
+font-weight: 600px;
+}
+.description,.current-feel{
+    margin-top: 0;
+    line-height: 1;
     padding-left: 20px;
 }
-.parameter-row{
+.description{
+    font-size: 32px;
+}
+.current-feel{
+    font-size: 18px;
+}
+.weather-icon{
+    width: 200px;
+    margin-right: 100px;
+    margin-top: 50px;
+}
+h2{
+    margin: 40px 0 0 0;
+}
+.general{
+    margin: 0px;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-
 }
-.parameter-label{
-    text-align: left;
-    font-weight: 400;
-    font-size: 12px;
+.gen-details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.parameter-value{
-    text-align: right;
-    font-weight: 600;
-    font-size: 12px;
+.weather-icon-mini{
+    width: 60px;
+    margin-left: 10px;
+}
+.min-max,.description-today{
+    font-size: 1em;
+    letter-spacing: 1px;
+    line-height: 1px;
+}
+.details{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
