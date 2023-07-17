@@ -22,8 +22,8 @@ export default function Forecast({ data }) {
   );
   console.log(forecastDays)
   return (
-    <>
-      <h2>Daily</h2>
+    <div className="forecast">
+      <h2 className="title">Daily</h2>
       <Accordion allowZeroExpanded>
         {data.list.splice(0, 7).map((item, idx) => (
           <AccordionItem key={idx}>
@@ -72,6 +72,6 @@ export default function Forecast({ data }) {
           </AccordionItem>
         ))}
       </Accordion>
-    </>
+    </div>
   );
 }

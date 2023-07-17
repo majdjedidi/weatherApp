@@ -1,27 +1,15 @@
-/* .weather{
-    width: 50%;
-    border-radius: 6px;
-    box-shadow: 10px -2px 20px 2px rgb(0 0 0 /30%);
-    color: #fff;
-    background-color: #333B;
-    padding: 0 20px 20px 20px;
-    min-height: 100%;
-    margin: auto;
-    backdrop-filter: blur(20px);
-} */
-
 .current-weather{
-    padding: 50px 10px;
+    padding: 50px 10px 0px 10px;
 }
 .top{
-
    margin: 20px;
 }
 .current-status{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 0;
+    padding:0;
+    margin: 0;
 }
 .temp{
     margin-left: 50px;
@@ -32,6 +20,7 @@
 .location{
 letter-spacing: 1px;
 font-weight: 600px;
+margin-bottom: -50px;
 }
 .description,.current-feel{
     margin-top: 0;
@@ -49,9 +38,11 @@ font-weight: 600px;
     margin-right: 100px;
     margin-top: 50px;
 }
+
 h2{
     margin: 40px 0 0 0;
 }
+
 .general{
     margin: 0px;
     display: flex;

@@ -8,18 +8,18 @@ export default function CurrentWeather({data}) {
                 <div className="current">
                 <h1 className='location'>Sousse, Tunisia</h1>
                 <div className="current-status">
-                 <p className='temp'>40°C</p>
-                 <img src='./public/icons/01d.png' alt="weather-icon" className='weather-icon'/>
+                 <p className='temp'>{Math.round(data.main.temp)}°C</p>
+                 <img src={`./public/icons/${data.weather[0].icon}.png`} alt="weather-icon" className='weather-icon'/>
                  </div>
-                 <p className='description'>Sunny</p>
-                 <p className='current-feel'>Feels like 43°C</p>
+                 <p className='description'>{data.weather[0].description}</p>
+                 <p className='current-feel'>Feels like {Math.round(data.main.feels_like)}°C</p>
                  </div>
                  
              </div>
              <div className='bottom'>
                 <h2>Today</h2>
                 <div className="general">
-                <p className='min-max'> Temperature : Min 28°C / Max 44°C</p>
+                <p className='min-max'> Temperature : Min {Math.round(data.main.temp_min)}°C / Max {Math.round(data.main.temp_max)}°C</p>
                 <div className="gen-details">
                 <p className="description-today">Sunny</p>
                 <img src='./public/icons/01d.png' alt="weather-icon" className='weather-icon-mini'/>
@@ -32,11 +32,11 @@ export default function CurrentWeather({data}) {
                     </div>
                     <div className="detail">
                         <p className="param">Pressure</p>
-                        <p className="value">1020h Pa</p>
+                        <p className="value">{Math.round(data.main.pressure)} hPa</p>
                     </div>
                     <div className="detail">
                         <p className="param">Humidity</p>
-                        <p className="value">70%</p>
+                        <p className="value">{Math.round(data.main.humidity)}%</p>
                     </div>
                     <div className="detail">
                         <p className="param">Precipitation</p>
